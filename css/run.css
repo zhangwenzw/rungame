@@ -1,0 +1,90 @@
+*{
+    font-family:"微软雅黑","HanHei SC", PingHei, "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body,html{
+    padding:0;margin:0;width:100%;height:100%;overflow: hidden;
+}
+canvas{
+    background: #000 url(../img/bg/bg3.jpg) repeat-x;
+    background-size: contain;
+}
+.mask{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.5);position: fixed;top:0;left:0;
+    animation: mask 2s ease forwards;
+}
+.start,.over{
+    width:300px;height:200px;border:2px solid #fff;border-radius:10px;position: fixed;top:0;left:0;right:0;bottom:0;margin:auto;z-index:1;text-align: center;line-height: 50px;color:#fff;font-size: 30px;padding-top:15px;animation: start 2s ease forwards;
+}
+.over{
+    height:300px;border-radius:15px;animation: start1 2s ease forwards;
+}
+/*.over{*/
+    /*display: none;*/
+/*}*/
+.start .btn,.over .again{
+    width:90px;height:50px;background: greenyellow;color:#333;border-radius: 5px;margin:20px auto;cursor: pointer;border:0;
+}
+.over .again{
+    width:130px;font-size:25px;
+}
+@keyframes start{
+    0%{
+        transform:translateY(-1000px);
+    }
+    100%{
+        tramsform:translateY(1000px);
+    }
+}
+@keyframes start1 {
+    0%{
+        tramsform:translateY(1000px);
+    }
+    100%{
+        transform:translateY(-1000px);
+    }
+}
+@keyframes mask {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes mask1 {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.zhi{
+    width:180px;
+    height: 100px;
+    position: fixed;
+    top:20px;
+    right:60px;
+}
+.zhi .life,.zhi .grade{
+    width:80px;
+    height:80px;
+    background: #333;
+    border:1px solid #000;
+    border-radius: 5px;text-align: center;
+    float: left;
+    margin-right:10px;
+    color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+.zhi .life span,.zhi .grade span{
+    display: block;
+    width:100%;height:50px;
+    line-height: 50px;
+    color: #333;
+    background:#fff;
+}
